@@ -17,11 +17,10 @@ app.use(
   })
 );
 
-// Endpoints
-app.get("/", (req, res) => {
-  res.send("Hello World!");
-});
+// Servir archivos estáticos de frontend
+app.use(express.static(path.join(__dirname, "../../frontend/src")));
 
+// Endpoints
 app.use("/api/categorias", categoriasRouter);
 
 // Iniciar el servidor
