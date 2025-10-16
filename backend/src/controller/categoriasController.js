@@ -1,6 +1,6 @@
 const db = require("../config/db");
 
-exports.obtenerClientes = async (req, res) => {
+exports.obtenerCategorias = async (req, res) => {
   const sql = "SELECT id_categoria, nombre FROM categorias";
 
   try {

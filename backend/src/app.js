@@ -4,6 +4,7 @@ const path = require("path");
 
 // Routers
 const categoriasRouter = require("./routes/categoriasRouter");
+const subcategoriasRouter = require("./routes/subCategoriasRouter");
 
 const app = express();
 const PORT = process.env.PORT || 3001;
@@ -21,7 +22,8 @@ app.use(
 app.use(express.static(path.join(__dirname, "../../frontend/src")));
 
 // Endpoints
-app.use("/api/categorias", categoriasRouter);
+app.use("/api", categoriasRouter);
+app.use("/api", subcategoriasRouter);
 
 // Iniciar el servidor
 app.listen(PORT, () => {
