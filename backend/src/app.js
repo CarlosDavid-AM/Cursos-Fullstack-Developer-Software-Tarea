@@ -5,6 +5,7 @@ const path = require("path");
 // Routers
 const categoriasRouter = require("./routes/categoriasRouter");
 const subcategoriasRouter = require("./routes/subCategoriasRouter");
+const docentesRouter = require("./routes/docentesRouter");
 
 const app = express();
 const PORT = process.env.PORT || 3001;
@@ -22,8 +23,11 @@ app.use(
 app.use(express.static(path.join(__dirname, "../../frontend/src")));
 
 // Endpoints
-app.use("/api", categoriasRouter);
-app.use("/api", subcategoriasRouter);
+const basePath = "/api";
+
+app.use(basePath, categoriasRouter);
+app.use(basePath, subcategoriasRouter);
+app.use(basePath, docentesRouter);
 
 // Iniciar el servidor
 app.listen(PORT, () => {
