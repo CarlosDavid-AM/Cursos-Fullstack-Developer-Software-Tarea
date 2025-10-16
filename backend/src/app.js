@@ -6,6 +6,7 @@ const path = require("path");
 const categoriasRouter = require("./routes/categoriasRouter");
 const subcategoriasRouter = require("./routes/subCategoriasRouter");
 const docentesRouter = require("./routes/docentesRouter");
+const cursosRouter = require("./routes/cursosRouter");
 
 const app = express();
 const PORT = process.env.PORT || 3001;
@@ -28,6 +29,7 @@ const basePath = "/api";
 app.use(basePath, categoriasRouter);
 app.use(basePath, subcategoriasRouter);
 app.use(basePath, docentesRouter);
+app.use(basePath, cursosRouter);
 
 // Iniciar el servidor
 app.listen(PORT, () => {
