@@ -3,16 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Cursos</title>
-
+    <title>Agregar Curso</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
       crossorigin="anonymous"
     />
-
-    <link rel="stylesheet" href="/styles/styles.css" />
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
@@ -39,12 +36,13 @@
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="/"
-                  >Cursos</a
-                >
+                <a class="nav-link" href="/">Cursos</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="/agregar-curso"
+                <a
+                  class="nav-link active"
+                  aria-current="page"
+                  href="/agregar-curso"
                   >Agregar Cursos</a
                 >
               </li>
@@ -53,13 +51,9 @@
         </div>
       </nav>
     </header>
-
-    <main>
-      <h1 class="text-center">Cursos</h1>
-      <div class="container" id="cursos-container"></div>
+    <main class="container mt-4">
+      <h1>Agregar Nuevo Curso</h1>
+      <p>Formulario para agregar un nuevo curso.</p>
     </main>
-
-    <footer></footer>
-    <script src="/js/script.js"></script>
   </body>
 </html>

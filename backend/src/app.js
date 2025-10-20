@@ -23,6 +23,15 @@ app.use(
 // Servir archivos estáticos de frontend
 app.use(express.static(path.join(__dirname, "../../frontend/src")));
 
+// Rutas para servir archivos HTML
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, '../../frontend/src/index.html'));
+});
+
+app.get('/agregar-curso', (req, res) => {
+  res.sendFile(path.join(__dirname, '../../frontend/src/pages/agregar-curso.html'));
+});
+
 // Endpoints
 const basePath = "/api";
 
