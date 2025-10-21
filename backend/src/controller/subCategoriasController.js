@@ -3,7 +3,7 @@ const db = require("../config/db");
 exports.obtenerSubCategorias = async (req, res) => {
   const sql =
     "SELECT id_subcategoria, nombre FROM subcategorias WHERE id_categoria = ?";
-  const { id_categoria } = req.params;
+  const { id_categoria } = req.query;
 
   try {
     const [rows] = await db.query(sql, [id_categoria]);

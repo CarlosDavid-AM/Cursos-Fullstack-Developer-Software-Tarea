@@ -5,7 +5,7 @@ const subCategoriasController = require("../controller/subCategoriasController")
 
 // Ruta para obtener subcategorías de una categoría específica
 router.get(
-  "/:id_categoria/subcategorias",
+  "/subcategorias",
   subCategoriasController.obtenerSubCategorias
 );
 
